@@ -1,0 +1,115 @@
+#NHT-btnMenu {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 9900;
+}
+
+#NHT-Menu {
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    border-radius: 20px; /* Bo tròn 4 góc */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 
+                0 12px 40px rgba(0, 0, 0, 0.2); /* Hiệu ứng nổi lên */
+    background-color: white; /* Màu nền trắng cho menu */
+    transition: box-shadow 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+    z-index: 9999;
+}
+
+#NHT-Menu:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 
+                0 18px 50px rgba(0, 0, 0, 0.3); /* Tăng hiệu ứng nổi khi hover */
+}
+
+#NHT-Menu h1 {
+    text-align: center;
+    font-weight: 800;
+    cursor: default;
+}
+
+#NHT-Menu h1::after {
+    content: '';
+    display: block; /* Đảm bảo dòng ngang được hiển thị như một phần tử block */
+    border-top: 0.1px solid #000; /* đường viền trên màu đen */
+    width: 100%; /* chiều rộng tương đương với phần tử mẹ */
+    margin: 20px auto; /* lề trên và dưới 10px, lề trái và phải tự động căn giữa */
+}
+
+#NHT-Menu .main {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    display:inline-table;
+}
+
+#NHT-Menu .main .box {
+    margin-bottom: 20px;
+}
+
+#NHT-Menu .main .box2 {
+    margin-bottom: 20px;
+    display: inline-flex;
+}
+
+#NHT-Menu .main label{
+    display: block;
+    margin: 5px;
+    font-weight: bold;
+}
+
+#NHT-Menu .main input, textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* to include padding and border in width calculation */
+}
+
+#NHT-msg {
+    width: 100%;
+    height: 150px;
+    resize: none; /* Ngăn chặn người dùng thay đổi kích thước của textarea */
+    overflow: auto; /* Hiển thị thanh cuộn nếu nội dung vượt quá kích thước */
+}
+
+#NHT-Menu .main .btn-no,
+#NHT-Menu .main .btn-yes {
+    position: absolute;
+    bottom: 20px; /* Điều chỉnh khoảng cách từ dưới */
+    transform: translateX(-50%); /* Dịch chuyển về bên trái 50% của chiều rộng của chính nút */
+    width: 100px; /* Đặt chiều rộng của nút */
+    height: 40px; /* Đặt chiều cao của nút */
+    border-radius: 5px; /* Bo tròn viền của nút */
+    color: white; /* Màu chữ của nút */
+    cursor: pointer; /* Đổi con trỏ khi hover */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền mượt mà */
+    border: none; /* Bỏ viền của nút */
+}
+
+#NHT-Menu .main .btn-no {
+    left: 25%; /* Đặt ở bên trái theo chiều ngang */
+    background-color: #e74c3c; /* Màu nền của nút */
+}
+
+#NHT-Menu .main .btn-yes {
+    left: 75%; /* Đặt ở bên phải theo chiều ngang */
+    background-color: #3498db; /* Màu nền của nút */
+}
+
+#NHT-Menu .main .btn-no:hover {
+    background-color: #c0392b; /* Thay đổi màu nền của nút khi hover */
+}
+
+#NHT-Menu .main .btn-yes:hover {
+    background-color: #2980b9; /* Thay đổi màu nền của nút khi hover */
+}
